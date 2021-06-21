@@ -45,7 +45,22 @@ def dijkstra(graph, start, end):
         except KeyError:
             print("No path is reachable")
             break
-    
-dijkstra(graph, 'a', 'h')
 
-    
+# dijkstra(graph, 'a', 'h')
+arr = np.random.rand(10000)
+print(type(arr))
+
+import time
+t1 = time.time()
+ret = []
+for i in arr:
+    ret.append(str(i) in arr)
+print("time", time.time() - t1)
+
+t1 = time.time()
+arr = set(arr)
+ret = []
+for i in arr:
+    ret.append(str(i) in arr)
+print("time", time.time() - t1)
+print(type(arr))
